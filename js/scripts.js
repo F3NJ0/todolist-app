@@ -13,7 +13,7 @@ function newItem() {
 
   // 2. Strike through items when user clicks on it
   function crossOut() {
-    li.addClass("strike");
+    li.toggleClass("strike");
   }
   li.on("click", crossOut);
 
