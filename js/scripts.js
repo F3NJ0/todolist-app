@@ -10,7 +10,6 @@ function newItem() {
     $('#list').append(li);
   }
 
-
   // 2. Strike through items when user clicks on it
   function crossOut() {
     li.toggleClass("strike");
