@@ -28,6 +28,6 @@ function newItem() {
   }
   deleteButton.on("click", deleteListItem);
 
-  // 4. Change order of item in the List
+  // 4. Change order of items in the List
   $('#list').sortable();
 }
