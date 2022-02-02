@@ -1,19 +1,21 @@
 function newItem() {
-
-  let input = $('#input');
-  let list = $('#list');
-  let inputValue = input.val();
+  let li = $('<li></li>');
+  let inputValue = $('#input').val();
+  li.append(document.createTextNode(inputValue));
 
   // add item to list when clicking on "Add" button
-  let li = $('<li>' + inputValue + '</li>');
-  list.append(li);
+  if (inputValue === ''){
+    alert("Please write something in the field.");
+  } else {
+    $('#list').append(li);
+  }
+
 
   // Strike through items when user clicks on it
   function crossOut() {
-    li.on("click", function() {
-      li.addClass("strike");
-    });
+    li.addClass("strike");
   }
+  li.on("click", crossOut);
 
   // Adding delete button to list items
   let deleteButton = $('<button>X</button>');
@@ -22,6 +24,8 @@ function newItem() {
 
   // Delete items from List
   function deleteListItem() {
-
+    deleteButton.on("click", function() {
+      li.addClass("delete");
+    });
   }
 }
