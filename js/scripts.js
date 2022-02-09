@@ -30,3 +30,10 @@ function newItem() {
   // 4. Change order of items in the List
   $('#list').sortable();
 }
+
+$('#input').keydown(function(event){
+  var keyCode = (event.keyCode ? event.keyCode : event.which);
+  if (keyCode == 13) {
+     newItem();
+  }
+});
