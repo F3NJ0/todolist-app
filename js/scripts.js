@@ -33,7 +33,6 @@ function newItem() {
 
 // Add items when hitting enter key //
 $('#input').keydown(function(event){
-  event.preventDefault();
   var keyCode = (event.keyCode ? event.keyCode : event.which);
   if (keyCode == 13) {
      newItem();
